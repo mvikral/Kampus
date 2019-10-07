@@ -28,4 +28,9 @@ class M_mahasiswa extends CI_Model
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
+	public function detail_data($NPM=null)
+	{
+		$query = $this->db->get_where('tb_mhs', array('NPM' => $NPM))->row(); 
+		return $query;
+	}
 }

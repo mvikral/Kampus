@@ -18,8 +18,10 @@
             <th>Nomor telephon</th>
             <th>Alamat</th>
             <th>Tanggal lahir</th>
+            <th>Detail</th>
             <th>Hapus</th>
             <th>Edit</th>
+            
           </tr>
             
             <?php foreach ($mahasiswa as $mhs) : ?>
@@ -29,6 +31,7 @@
             <td><?php echo $mhs->Tlp ?></td>
             <td><?php echo $mhs->Alamat ?></td>
             <td><?php echo $mhs->Tgl_lahir ?></td>
+            <td><?php echo anchor('mahasiswa/detail/'. $mhs->NPM, '<div class="btn btn-success btn-sm"><i class="fa fa-search-plus"></i></div>')  ?></td>
             <td onclick="javascript : return confirm('Yakin hapus ?')"><?php echo anchor('mahasiswa/hapus/'.$mhs->NPM,'<div class="btn btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
 
             <td><?php echo anchor('mahasiswa/edit/'.$mhs->NPM, '<div class="btn btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
@@ -48,7 +51,7 @@
         </button>
       </div>
         <div class="modal-body">
-       <form method="post" action="<?php echo base_url(). 'mahasiswa/tambah_data'; ?>">
+       <form method="post" action="<?php echo base_url(). 'index.php/mahasiswa/tambah_data'; ?>">
         <div class="form-group">
            <label>Nama Mahasiswa</label>
            <input type="text" name="Nama" class="form-control">
@@ -64,6 +67,18 @@
         <div class="form-group">
            <label>Tanggal Lahir</label>
            <input type="text" name="Tgl_lahir" class="form-control">
+         </div>
+         <div class="form-group">
+           <label>Jurusan</label>
+           <input type="text" name="Jurusan" class="form-control">
+         </div>
+         <div class="form-group">
+           <label>Kelas</label>
+           <input type="text" name="Kelas" class="form-control">
+         </div>
+         <div class="form-group">
+           <label>IPK</label>
+           <input type="text" name="IPK" class="form-control">
          </div>
     <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancel</button>
     <button type="submit" class="btn btn-primary">Save changes</button>

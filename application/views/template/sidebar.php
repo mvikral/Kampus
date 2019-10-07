@@ -12,13 +12,13 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="<?php echo base_url('index.php/mahasiswa/index') ?> " class="nav-link">
               <i class="fa fa-graduation-cap"></i>
               <p>Mahasiswa</p>
             </a>
           </li>
                     <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="fa fa-user"></i>
               <p>Dosen</p>
             </a>
