@@ -18,21 +18,15 @@
             </a>
           </li>
                     <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?php echo base_url('Admin/index') ?> " class="nav-link">
               <i class="fa fa-user"></i>
-              <p>Dosen</p>
+              <p>Admin</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="fa fa-university"></i>
-              <p>Fakultas</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="<?php echo base_url('auth') ?> " class="nav-link">
               <i class="fa fa-lock"></i>
-              <p>Ganti password</p>
+              <p>Penambahan Admin</p>
             </a>
           </li>
           <li class="nav-item">
