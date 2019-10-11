@@ -10,11 +10,6 @@ class M_admin extends CI_Model
 	{
 		 return $this->db->get('login');
 	}
-
-    public function input_data($data,$table)
-    {
-  $this->db->insert($table,$data);
-	}
 	public function hapus_data($where, $table)
 	{
 		$this->db->where($where);
@@ -28,9 +23,9 @@ class M_admin extends CI_Model
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
-	public function detail_data($NPM=null)
+	public function detail_data($id=null)
 	{
-		$query = $this->db->get_where('tb_mhs', array('NPM' => $NPM))->row(); 
+		$query = $this->db->get_where('login', array('id' => $id))->row(); 
 		return $query;
 	}
 }

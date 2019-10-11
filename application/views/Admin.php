@@ -12,18 +12,22 @@
     <section class="content">
         <table class="table">
           <tr>
+            <th>ID</th>
             <th>Username</th>
             <th>Email</th>
+            <th>Detail</th>
+            <th>Hapus</th>
+            <th>Edit</th>
           </tr>
             
             <?php foreach ($admin as $admin) : ?>
           <tr>
+            <td><?php echo $admin->id ?></td>
             <td><?php echo $admin->username ?></td>
             <td><?php echo $admin->email ?></td>
-            <td><?php echo anchor('Admin/detail/'. $admin->admin_id, '<div class="btn btn-success btn-sm"><i class="fa fa-search-plus"></i></div>')  ?></td>
-            <td onclick="javascript : return confirm('Yakin hapus ?')"><?php echo anchor('admin/hapus/'.$admin->admin_id,'<div class="btn btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
-
-            <td><?php echo anchor('Admin/edit/'.$admin->admin_id, '<div class="btn btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
+            <td><?php echo anchor('Admin/detail/'. $admin->id, '<div class="btn btn-success btn-sm"><i class="fa fa-search-plus"></i></div>')  ?></td>
+            <td onclick="javascript : return confirm('Yakin hapus ?')"><?php echo anchor('admin/hapus/'.$admin->id,'<div class="btn btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
+            <td><?php echo anchor('Admin/edit/'.$admin->id, '<div class="btn btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?>
             </td>
           </tr>
         <?php endforeach ;  ?>
